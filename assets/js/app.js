@@ -15,9 +15,34 @@ function fetchFromWiki(searchTerm){
     renderSearchResults(data[1], data[3]);
   });
 
+$.ajax({
+  url: 'https://en.wikipedia.org/w/api.php',
+  method: 'get',
+  dataType: 'json',
+  data: {
+    action: 'query'
+  },
+}) .then(function(data) {
+    console.dir(data);
+    renderSearchResults(data);
+  })
+
+
+.done(function() {
+  console.log("success");
+})
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
+});
+
+
 }
 
-//chain ajax to search by image
+
+
 
 function renderSearchResults(listOfLabels, listOfUrls){
   var html = "";
