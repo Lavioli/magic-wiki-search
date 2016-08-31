@@ -1,0 +1,51 @@
+.banner {
+    width: 100%;
+    margin: 10px auto 10px;
+    text-align: center;
+}
+
+.search-box {
+    width: 100%;
+    margin: 10px auto 50px;
+    text-align: center;
+}
+
+.search-results {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.fa {
+    border: 1px solid #ddd;
+    border-right: 1px solid #F5F5F5;
+    height: 16px;
+    width: 12px;
+    position: fixed;
+    padding-left: 20px;
+}
+
+#query {
+    width: 50%;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-left: 1px solid white;
+    font-size: 14px;
+    padding-left: 55px;
+    font-family: Arial;
+    background-color: #F5F5F5;
+    margin: 0px auto;
+}
+
+
+
+i {
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 10px;
+    color: #A5A5A5;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
