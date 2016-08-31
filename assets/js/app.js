@@ -13,23 +13,10 @@ function fetchFromWiki(searchTerm){
   .then(function(data) {
     console.dir(data);
     renderSearchResults(data[1], data[3]);
-  });
-
-$.ajax({
-  url: 'https://en.wikipedia.org/w/api.php',
-  method: 'get',
-  dataType: 'json',
-  data: {
-    action: 'query'
-  },
-}) .then(function(data) {
-    console.dir(data);
-    renderSearchResults(data);
   })
 
-
-.done(function() {
-  console.log("success");
+.done(function(data) {
+  console.dir(data);
 })
 .fail(function() {
   console.log("error");
@@ -38,8 +25,58 @@ $.ajax({
   console.log("complete");
 });
 
+$.ajax({
+  method: 'get',
+  url: 'https://en.wikipedia.org/w/api.php',
+  data: {
+   
+      format: 'json',
+      action: 'query',
+      titles: searchTerm,
+      prop: 'images'
+    },
+    dataType: 'jsonp'
+})
+.then(function(data) {
+    console.dir(data);
+  }).done(function(data) {
+  console.dir(data);
+})
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
 
-}
+});
+/*
+
+$.ajax({
+  method: 'get',
+  url: 'https://commons.wikimedia.org/w/api.php',
+  data: {
+      action: 'query',
+      title: searchTerm,
+      prop: 'image',
+      iiprop: 'url'
+
+    },
+    dataType: 'jsonp'
+})
+.then(function(data) {
+    console.dir(data);
+  }).done(function(data) {
+  console.dir(data);
+})
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
+
+});*/
+};
+
 
 
 
