@@ -23,7 +23,7 @@ function renderSearchResults(listOfLabels, listOfUrls){
   var html = "";
   $.each(listOfLabels, function(index, item){
     var url = listOfUrls[index];
-    html += "<li><a href='" + url + "'>" + item + "</a></li>";
+    html += "<li><a target='_blank' href='" + url + "'>" + item + "</a></li>";
   });
   $('.search-results').html(html);
 }
