@@ -2,50 +2,60 @@
     font-family: 'Playfair Display', serif;
 }
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
 .banner {
     width: 100%;
-    margin: 10px auto 10px;
+    margin: 0.625em auto 0.625em;
     text-align: center;
     font-size: 3em;
 }
 
 .search-box {
     width: 100%;
-    margin: 10px auto 50px;
+    margin: 1.250em auto 3.13em;
     text-align: center;
 }
 
 .search-results {
     width: 80%;
-    margin: 0 auto;
+    margin: 1.250em auto;
+    margin-top: 50px;
 }
 
-
 .fa {
-    border: 1px solid #ddd;
     border-right: 1px solid #F5F5F5;
-    height: 16px;
-    width: 12px;
+    height: 12px;
+    width: 12pxem;
     position: absolute;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 #query {
     width: 50%;
-    height: 30px;
-    border: 1px solid #ddd;
-    border-left: 1px solid white;
-    font-size: 14px;
-    padding-left: 55px;
+    height: 2.728em;
+    border: 0.0625em solid #ddd;
+    border-left: 0.0625em solid white;
+    font-size: 0.875em;
+    padding-left: 3.14em;
     font-family: Arial;
     background-color: #F5F5F5;
     margin: 0px auto;
 }
 
-
-
 i {
-    font-size: 15px;
+    font-size: 0.938em;
     text-align: center;
     padding: 8px 10px;
     color: #A5A5A5;
@@ -69,3 +79,20 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.footer {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+span.frustration {
+    color: red;
+}
+
+
+
