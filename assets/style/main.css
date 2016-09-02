@@ -42,7 +42,10 @@
     margin: 0px auto;
 }
 
-
+img {
+    width: 256px;
+    height: 144px;
+}
 
 i {
     font-size: 15px;

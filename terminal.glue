@@ -1,0 +1,39 @@
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project ] git status
+On branch laviesolution
+Your branch is up-to-date with 'origin/laviesolution'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   assets/js/app.js
+	modified:   assets/style/main.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	terminal.glue
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets ] cd assets
+/Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets
+
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets ] git clone https://github.com/lonekorean/mini-preview.git
+Cloning into 'mini-preview'...
+
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets ] ls
+js
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets/mini-preview ] cd mini-preview
+/Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets/mini-preview
+
+█ [ /Users/lavieruan/Desktop/Thinkful prep course/wiki-search-project/assets/mini-preview ] ls
+LICENSE.md
+README.md
+index.html
+jquery.minipreview.css
+jquery.minipreview.js
+
+mini-preview
+style
+
+ 

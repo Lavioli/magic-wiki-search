@@ -1,3 +1,5 @@
+var x;
+
 function fetchFromWiki(searchTerm) {
     $.ajax({
             method: 'get',
@@ -9,115 +11,59 @@ function fetchFromWiki(searchTerm) {
             },
             dataType: 'jsonp'
         })
-        //returns an array
-
+    //["cat", "catherine"]
 
     .done(function(data) {
-        $(function() {
-        var params = {
-            q: 'cat',
-            count: 1// Request parameters
-        };
-      
-        $.ajax({
-            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","multipart/form-data");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","4d987553b4a14267861b431e1c2779ef");
-            },
-            type: "POST",
-            // Request body
-            // data: "{body}",
-        })
-        .done(function(data) {
-             console.log(data);
-              console.log(data.value[0].contentUrl);
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-             
-    })
+        var newData = data[1].splice(0, 5); //limit to only 5 elements because I AM BROKE 😭
 
+        $.each(newData, function(i, v) { //loops each of the elements and request for img from bing
+            var params = {
+                q: v,
+                count: 1 // Request only 1st search result
+            };
+
+            $('.search-results').html(""); //clears out search results
+
+            $.ajax({
+                    url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?" + $.param(params),
+                    beforeSend: function(xhrObj) {
+                        // Request headers
+                        xhrObj.setRequestHeader("Content-Type", "multipart/form-data");
+                        xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "4d987553b4a14267861b431e1c2779ef");
+                    },
+                    type: "POST",
+                    // Request body
+                    data: "{body}",
+                })
+
+                .done(function(x) {
+                    // x = data.value[0].contentUrl
+                    // var search = searchTerm;
+                    console.log(data[3][i]);
+                    renderSearchResults(v, x.value[0].contentUrl, data[3][i]);
+
+                })
+                .fail(function() {
+                    alert(".each error");
+                });
+        });
+
+    })
     .fail(function() {
             console.log("error");
         })
         .always(function() {
             console.log("complete");
         });
-
-
-
-
-    /*$.ajax({
-      method: 'get',
-      url: 'https://en.wikipedia.org/w/api.php',
-      data: {
-       
-          format: 'json',
-          action: 'query',
-          titles: searchTerm,
-          prop: 'images'
-        },
-        dataType: 'jsonp'
-    })
-    .then(function(data) {
-        console.dir(data);
-      }).done(function(data) {
-      console.dir(data);
-    })
-    .fail(function() {
-      console.log("error");
-    })
-    .always(function() {
-      console.log("complete");
-
-    });*/
-    /*
-
-    $.ajax({
-      method: 'get',
-      url: 'https://commons.wikimedia.org/w/api.php',
-      data: {
-          action: 'query',
-          title: searchTerm,
-          prop: 'image',
-          iiprop: 'url'
-
-        },
-        dataType: 'jsonp'
-    })
-    .then(function(data) {
-        console.dir(data);
-      }).done(function(data) {
-      console.dir(data);
-    })
-    .fail(function() {
-      console.log("error");
-    })
-    .always(function() {
-      console.log("complete");
-
-    });*/
-
 };
 
+//renderSearchResult("cat", "link")
+function renderSearchResults(listOfLabels, listOfImgUrl, listOfSiteUrl) {
+    var html, imghtml, searchResult = listOfLabels, url = listOfSiteUrl;
 
-
-
-
-
-function renderSearchResults(listOfLabels, listOfUrls) {
-    var html = "";
-    $.each(listOfLabels, function(index, item) {
-        var url = listOfUrls[index];
-        var img = fetchFromBing(item);
-        html += "<li><a target='_blank' href='" + url + "'>" + item + "</a> <img src='" + img + "'></li>";
-
-    });
-    $('.search-results').html(html);
+    html = "<li><a target='_blank' class='html' href='" + url + "'>" + searchResult + "</a></li>";
+    $('.search-results').append(html);
+    $('.search-results a').miniPreview({ prefetch: 'none' });   
 }
 
 
@@ -129,5 +75,4 @@ $(function() {
         var searchTerm = $('#query').val();
         fetchFromWiki(searchTerm);
     });
-
 });
