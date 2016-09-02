@@ -15,20 +15,36 @@ body {
     min-height: 100%;
 }
 
-.banner {
+section#search-div {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+}
+
+section.banner {
     width: 100%;
     margin: 0.625em auto 0.625em;
     text-align: center;
     font-size: 3em;
 }
 
-.search-box {
+section.search-box {
     width: 100%;
     margin: 1.250em auto 3.13em;
     text-align: center;
 }
 
-.search-results {
+section#show-search-page {
+    display: none;
+}
+
+ul.search-results {
     width: 80%;
     margin: 1.250em auto;
     margin-top: 50px;
@@ -42,7 +58,7 @@ body {
     padding-left: 18px;
 }
 
-#query {
+input#query {
     width: 50%;
     height: 2.728em;
     border: 0.0625em solid #ddd;
@@ -80,7 +96,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.footer {
+footer.footer {
     width: 100%;
     position: absolute;
     right: 0;
