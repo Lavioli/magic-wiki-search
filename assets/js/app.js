@@ -88,6 +88,7 @@ function renderSearchResults(listOfLabels, listOfUrls) {
         html += "<li><a target='_blank' href='" + url + "'>" + item + "</a></li>";
     });
     $('.search-results').html(html);
+    $('.search-results a').miniPreview({ prefetch: 'none' });   
 }
 
 
