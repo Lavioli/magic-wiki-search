@@ -88,6 +88,7 @@ input[type=text]:focus {
     outline: none;
 }
 
+
 /*#results {
     position: absolute;
     top: 10%;
@@ -131,4 +132,12 @@ a:hover {
 
 .frustration {
     color: red;
+}
+
+.back-to-search {
+    display: none;
+    background-color: #fff;
+    color: #000;
+    float: right;
+    border: 0.031em solid #000;
 }
