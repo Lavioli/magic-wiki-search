@@ -141,3 +141,7 @@ a:hover {
     float: right;
     border: 0.031em solid #000;
 }
+
+button.back-to-search:hover{
+    cursor: pointer;
+}
