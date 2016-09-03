@@ -88,7 +88,7 @@ function renderSearchResults(listOfLabels, listOfUrls) {
         html += "<li><a target='_blank' href='" + url + "'>" + item + "</a></li>";
     });
     $('.search-results').html(html);
-    $('.search-results a').miniPreview({ prefetch: 'none' });   
+    $('.search-results a').miniPreview({ prefetch: 'none' });
 }
 
 
@@ -97,13 +97,11 @@ $(function() {
 
     $('#search-term').submit(function(event) {
         event.preventDefault();
-        $('#search-div').hide();
-        $('#show-search-page').toggle();
-        $('.search-results').fadeIn(5000, function() {
-            var searchTerm = $('#query').val();
-            fetchFromWiki(searchTerm);
-        });
-
+        $('#search-page').hide();
+        $('#results-page').toggle();
+        var searchTerm = $('#query').val();
+        fetchFromWiki(searchTerm);
     });
+
 
 });

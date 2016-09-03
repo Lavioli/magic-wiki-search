@@ -6,14 +6,14 @@
     <link rel="stylesheet" type="text/css" href="assets/style/main.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-     <!-- mini-display -->
+    <!-- mini-display -->
     <link rel="stylesheet" type="text/css" href="assets/mini-preview/jquery.minipreview.css">
 </head>
 
 <body>
-    <section id="search-div">
-        <!-- banner title  -->
-        <section class="banner">Magic Wiki Search</section>
+    <section id="search-page">
+        <!-- search banner title  -->
+        <h1 class="search-banner">Magic Wiki Search</h1>
         <!-- search bar -->
         <section class="search-box">
             <form id="search-term">
@@ -22,14 +22,17 @@
             </form>
         </section>
     </section>
-    <section id="show-search-page">
-        <ul class="search-results"></ul>
+    <section id="results-page">
+        <!-- results banner title -->
+        <h1 class="results-banner">Search Results</h1>
+        <!-- results from API search -->
+        <ul class="results"></ul>
+        <p class="back-to-search">Back to Search</p>
     </section>
     <footer class="footer">
         <p>Made with <span class="frustration">frustration</span> by <a href="https://github.com/Lavioli">Lavie</a> &amp; <a href="https://github.com/bealearnscode">Beatrix</a></p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    
     <script type="text/javascript" src="assets/mini-preview/jquery.minipreview.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
 </body>

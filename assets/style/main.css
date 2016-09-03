@@ -15,10 +15,10 @@ body {
     min-height: 100%;
 }
 
-#search-div {
+#search-page {
     position: absolute;
     top: 30%;
-    bottom: 0;
+    bottom: 20%;
     left: 0;
     right: 0;
     margin: auto;
@@ -27,9 +27,7 @@ body {
     overflow: auto;
 }
 
-.banner {
-    width: 100%;
-    margin: 0.625em auto 0.625em;
+h1 {
     text-align: center;
     font-size: 3em;
 }
@@ -40,11 +38,20 @@ body {
     text-align: center;
 }
 
-#show-search-page {
+#results-page {
     display: none;
+    position: absolute;
+    top: 10%;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
 }
 
-.search-results {
+.results {
     width: 80%;
     margin: 1.250em auto;
     margin-top: 50px;
@@ -81,6 +88,18 @@ input[type=text]:focus {
     outline: none;
 }
 
+/*#results {
+    position: absolute;
+    top: 10%;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}*/
+
 li {
     list-style: none;
     margin-top: 5%;
@@ -96,6 +115,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.back-to-search {
+    font-size: 0.6em;
+    text-align: left;
+}
 
 .footer {
     position: absolute;
@@ -109,4 +132,3 @@ a:hover {
 .frustration {
     color: red;
 }
-
