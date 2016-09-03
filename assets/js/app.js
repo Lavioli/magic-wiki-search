@@ -38,7 +38,7 @@ function renderSearchResults(listOfLabels, listOfUrls) {
         var url = listOfUrls[index]; //url
         html += "<li><a target='_blank' href='" + url + "'>" + item + "</a></li>";
     });
-    //the html variable gets changed
+    //the html variable gets changed 
     $('.search-results').html(html);
     //when a is hovered over the search results, a minipreview will load for that result
     $('.search-results a').miniPreview({ prefetch: 'none' });
