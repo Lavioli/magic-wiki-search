@@ -44,14 +44,14 @@ function renderSearchResults(listOfLabels, listOfUrls) {
     $('.search-results a').miniPreview({ prefetch: 'none' });
 }
 
-
 // EVENT LISTENERS:
 $(function() {
-
     $('#search-term').submit(function(event) {
         event.preventDefault();
         $('#search-page').hide();
         $('#results-page, .back-to-search').toggle(); //becomes show;
+        
+        //takes in value 
         var searchTerm = $('#query').val();
         fetchFromWiki(searchTerm);
     });

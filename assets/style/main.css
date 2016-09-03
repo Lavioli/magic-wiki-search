@@ -66,17 +66,6 @@ h1 {
     margin: 7px;
 }
 
-#query {
-    width: 50%;
-    height: 2.728em;
-    border: 0.0625em solid #ddd;
-    font-size: 0.875em;
-    padding-left: 3.14em;
-    font-family: Arial;
-    background-color: #F5F5F5;
-    margin: 0px auto;
-}
-
 i {
     font-size: 0.938em;
     text-align: center;
@@ -86,6 +75,18 @@ i {
 
 input[type=text]:focus {
     outline: none;
+}
+
+
+#query {
+    width: 50%;
+    height: 2.728em;
+    border: 0.0625em solid #ddd;
+    font-size: 0.875em;
+    padding-left: 3.14em;
+    font-family: Arial;
+    background-color: #F5F5F5;
+    margin: 0px auto;
 }
 
 
@@ -140,4 +141,8 @@ a:hover {
     color: #000;
     float: right;
     border: 0.031em solid #000;
+}
+
+button.back-to-search:hover {
+    cursor: pointer;
 }
