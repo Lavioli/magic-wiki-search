@@ -66,8 +66,10 @@ h1 {
     margin: 7px;
 }
 
-#query,
-#query-medium {
+#query-large,
+#query-medium,
+#query-small,
+#query-xs {
     width: 50%;
     height: 2.728em;
     border: 0.0625em solid #ddd;
@@ -141,9 +143,34 @@ button.back-to-search:hover{
 
 /***** MEDIA QUERIES *****/
 
-@media only screen and (min-width: 864px) {
-    #query {
+@media only screen and (min-width: 876px) {
+    #query-medium,
+    #query-small,
+    #query-xs {
         display: none;
     }
+}
 
+@media only screen and (min-width: 665px) and (max-width: 875px) {
+    #query-large,
+    #query-small,
+    #query-xs {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 437px) and (max-width: 664px) {
+    #query-medium,
+    #query-large,
+    #query-xs {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 436px) {
+    #query-medium,
+    #query-large,
+    #query-small {
+        display: none;
+    }
 }
