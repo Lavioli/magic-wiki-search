@@ -74,7 +74,7 @@ h1 {
     padding-left: 3.14em;
     font-family: Arial;
     background-color: #F5F5F5;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 i {
@@ -109,17 +109,19 @@ a:hover {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
     text-align: center;
+    width: 100%
 }
 
 .footer p {
     font-size: 1.2rem;
     font-weight: 700;
+    padding-top: 10px;
 }
 
 .frustration {
@@ -131,10 +133,12 @@ a:hover {
     background-color: #f8f8ff;
     color: #000;
     float: right;
-    border: 0.031em solid #000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 20px;
+    border: 0.055em solid #000;
 }
 
 button.back-to-search:hover{
     cursor: pointer;
 }
-
