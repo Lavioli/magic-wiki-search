@@ -66,7 +66,8 @@ h1 {
     margin: 7px;
 }
 
-#query {
+#query,
+#query-medium {
     width: 50%;
     height: 2.728em;
     border: 0.0625em solid #ddd;
@@ -136,4 +137,13 @@ a:hover {
 
 button.back-to-search:hover{
     cursor: pointer;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media only screen and (min-width: 864px) {
+    #query {
+        display: none;
+    }
+
 }
