@@ -51,7 +51,7 @@ $(function() {
     $('#search-term').submit(function(event) {
         event.preventDefault();
         $('#search-page').hide();
-        $('#results-page, .back-to-search').toggle(); //becomes show;
+        $('#results-page, .back-to-search').toggle(); /*becomes show;*/
         var searchTerm = $('#query').val();
         fetchFromWiki(searchTerm);
     });
