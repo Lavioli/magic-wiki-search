@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Magic Wiki Search</title>
-    <link rel="stylesheet" type="text/css" href="assets/style/main.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <!-- mini-display -->
-    <link rel="stylesheet" type="text/css" href="mini-preview/jquery.minipreview.css">
-</head>
+    <head>
+        <title>Magic Wiki Search</title>
+        <link rel="stylesheet" type="text/css" href="assets/style/main.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <!-- mini-display -->
+        <link rel="stylesheet" type="text/css" href="mini-preview/jquery.minipreview.css">
+    </head>
 
-<body>
-    <section id="search-page">
-        <!-- search banner title  -->
-        <h1 class="search-banner">Magic Wiki Search</h1>
-        <!-- search bar -->
-        <section class="search-box">
-            <form id="search-term">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input id="query" type="text" autocomplete="off" placeholder=" e.g., cats. Then press enter." required>
-            </form>
+    <body>
+        <section id="search-page">
+            <!-- search banner title  -->
+            <h1 class="search-banner">Magic Wiki Search</h1>
+            <!-- search bar -->
+            <section class="search-box">
+                <form id="search-term">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input id="query" type="text" autocomplete="off" placeholder=" e.g., New York, Four horsemen, Mae C. Jemison. Then press enter." required>
+                </form>
+            </section>
         </section>
-    </section>
-    <section id="results-page">
-        <!-- results banner title -->
-        <h1 class="results-banner">Search Results</h1>
-        <!-- results from API search -->
-        <ul class="search-results"></ul>
-    </section>
-    <footer class="footer">
-        <p>Made with <span class="frustration">frustration</span> by <a href="https://github.com/Lavioli">Lavie</a> &amp; <a href="https://github.com/bealearnscode">Beatrix</a></p>
-        <button class="back-to-search">Back to Search</button>
-    </footer>
-    <!-- javascript files -->
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script type="text/javascript" src="mini-preview/jquery.minipreview.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-</body>
+
+        <section id="results-page">
+            <!-- results banner title -->
+            <h1 class="results-banner">Search Results</h1>
+            <!-- results from API search -->
+            <ul class="search-results"></ul>
+        </section>
+
+        <footer class="footer">
+            <p>Made with <span class="frustration">frustration</span> by <a href="https://github.com/Lavioli">Lavie</a> &amp; <a href="https://github.com/bealearnscode">Beatrix</a></p>
+            <button class="back-to-search">Back to Search</button>
+        </footer>
+        <!-- javascript files -->
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="mini-preview/jquery.minipreview.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+    </body>
 
 </html>
