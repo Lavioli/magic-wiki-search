@@ -12,7 +12,7 @@ function fetchFromWiki(searchTerm) {
         dataType: 'jsonp'
     })
 
-    .then(function(data) {
+        .then(function(data) {
             //once target data is received, renderSearch results gets invoked
             //data[1] is the array all the search result labels
             //data[3] is the array with all the url to the search result label
