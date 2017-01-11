@@ -38,10 +38,6 @@ h1 {
     text-align: center;
 }
 
-/*#back-to-search {
-    margin: 0 auto;
-}*/
-
 .back-to-search {
     background-color: #f8f8ff;
     border: 1px solid #000;
@@ -49,11 +45,8 @@ h1 {
     display: none;
     font-size: 1rem;
     font-weight: 500;
-    margin: 0 35%;
-    text-align: left;
-    /*position: absolute;
-    top: 0;
-    float: right;*/
+    margin: 2% 45%;
+    z-index: 999;
 }
 
 button.back-to-search:hover{
@@ -71,12 +64,6 @@ button.back-to-search:hover{
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
-}
-
-.results {
-    width: 80%;
-    margin: 1.250em auto;
-    margin-top: 50px;
 }
 
 .fa {
