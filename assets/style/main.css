@@ -38,10 +38,32 @@ h1 {
     text-align: center;
 }
 
+/*#back-to-search {
+    margin: 0 auto;
+}*/
+
+.back-to-search {
+    background-color: #f8f8ff;
+    border: 1px solid #000;
+    color: #000;
+    display: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 35%;
+    text-align: left;
+    /*position: absolute;
+    top: 0;
+    float: right;*/
+}
+
+button.back-to-search:hover{
+    cursor: pointer;
+}
+
 #results-page {
     display: none;
     position: absolute;
-    top: 10%;
+    top: 2%;
     bottom: 15%;
     left: 0;
     right: 0;
@@ -89,6 +111,8 @@ input[type=text]:focus {
 }
 
 li {
+    font-size: 1.135rem;
+    font-weight: 600;
     list-style: none;
     margin-top: 5%;
     text-align: center;
@@ -101,11 +125,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.back-to-search {
-    font-size: 0.6em;
-    text-align: left;
 }
 
 .footer {
@@ -128,26 +147,14 @@ a:hover {
     color: red;
 }
 
-.back-to-search {
-    display: none;
-    background-color: #f8f8ff;
-    color: #000;
-    float: right;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 20px;
-    border: 0.055em solid #000;
-    position: absolute;
-    top: 0;
-}
-
-button.back-to-search:hover{
-    cursor: pointer;
-}
 
 @media screen and (max-width: 571px){
     h1 {
         font-size: 2.5rem;
+    }
+
+    li {
+        font-size: 1rem;
     }
 
     .footer p {
