@@ -1,5 +1,6 @@
 * {
     font-family: 'Playfair Display', serif;
+    color: #141414;
 }
 
 html {
@@ -38,10 +39,24 @@ h1 {
     text-align: center;
 }
 
+.back-to-search {
+    background-color: #f8f8ff;
+    border: 2px solid #141414;
+    display: none;
+    font-size: 1.075em;
+    font-weight: 500;
+    /*margin: 2% 45%;*/
+    z-index: 999;
+}
+
+button.back-to-search:hover{
+    cursor: pointer;
+}
+
 #results-page {
     display: none;
     position: absolute;
-    top: 10%;
+    top: 15%;
     bottom: 15%;
     left: 0;
     right: 0;
@@ -51,10 +66,22 @@ h1 {
     overflow: auto;
 }
 
-.results {
-    width: 80%;
-    margin: 1.250em auto;
-    margin-top: 50px;
+.results-banner {
+    background-color: #f8f8ff;
+    left: 0;
+    margin-bottom: 0;
+    overflow: visible;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.search-results {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .fa {
@@ -89,23 +116,20 @@ input[type=text]:focus {
 }
 
 li {
+    font-size: 1.135rem;
+    font-weight: 600;
     list-style: none;
     margin-top: 5%;
     text-align: center;
+    z-index: 0;
 }
 
 a {
     text-decoration: none;
-    color: #000;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-.back-to-search {
-    font-size: 0.6em;
-    text-align: left;
 }
 
 .footer {
@@ -115,12 +139,14 @@ a:hover {
     left: 0;
     padding: 1rem;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 
 .footer p {
     font-size: 1.2rem;
     font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
     padding-top: 10px;
 }
 
@@ -128,17 +154,17 @@ a:hover {
     color: red;
 }
 
-.back-to-search {
-    display: none;
-    background-color: #f8f8ff;
-    color: #000;
-    float: right;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 20px;
-    border: 0.055em solid #000;
-}
 
-button.back-to-search:hover{
-    cursor: pointer;
+@media screen and (max-width: 571px){
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.875rem;
+    }
 }
