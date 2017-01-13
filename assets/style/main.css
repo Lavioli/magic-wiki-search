@@ -1,5 +1,6 @@
 * {
     font-family: 'Playfair Display', serif;
+    color: #141414;
 }
 
 html {
@@ -40,10 +41,9 @@ h1 {
 
 .back-to-search {
     background-color: #f8f8ff;
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid #141414;
     display: none;
-    font-size: 1rem;
+    font-size: 1.075em;
     font-weight: 500;
     margin: 2% 45%;
     z-index: 999;
@@ -66,10 +66,14 @@ button.back-to-search:hover{
     overflow: auto;
 }
 
-.results {
-    width: 80%;
-    margin: 1.250em auto;
-    margin-top: 50px;
+.results-banner {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 .fa {
@@ -114,7 +118,6 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
 }
 
 a:hover {
@@ -128,7 +131,7 @@ a:hover {
     left: 0;
     padding: 1rem;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 
 .footer p {
